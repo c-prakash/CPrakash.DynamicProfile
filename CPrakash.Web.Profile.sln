@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPrakash.Web.Profile.Mvc", "CPrakash.Web.Profile.Mvc\CPrakash.Web.Profile.Mvc.csproj", "{FA881AB5-FDA7-45F0-8341-B290CD696980}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPrakash.Web.Profile", "CPrakash.Web.Profile\CPrakash.Web.Profile.csproj", "{9A6BB1F7-BF60-4E00-8DD8-67FB061E0F3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA881AB5-FDA7-45F0-8341-B290CD696980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA881AB5-FDA7-45F0-8341-B290CD696980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA881AB5-FDA7-45F0-8341-B290CD696980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA881AB5-FDA7-45F0-8341-B290CD696980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A6BB1F7-BF60-4E00-8DD8-67FB061E0F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6BB1F7-BF60-4E00-8DD8-67FB061E0F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6BB1F7-BF60-4E00-8DD8-67FB061E0F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6BB1F7-BF60-4E00-8DD8-67FB061E0F3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

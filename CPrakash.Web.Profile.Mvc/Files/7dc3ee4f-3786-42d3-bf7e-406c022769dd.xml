@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profile>
+  <FirstName type="System.String" module="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Chandra</FirstName>
+  <LastName type="System.String" module="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Prakash</LastName>
+  <Name type="System.String" module="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Hello Mr.!!! Chandra Prakash </Name>
+  <Address type="CPrakash.Web.Profile.Mvc.Models.Address" module="CPrakash.Web.Profile.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Street type="System.String" module="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Jefferson</Street>
+    <Unit type="System.String" module="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Line1</Unit>
+    <City type="System.String" module="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Louisville</City>
+    <State type="System.String" module="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">KY</State>
+    <ZipCode type="System.String" module="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">40220</ZipCode>
+  </Address>
+</profile>
