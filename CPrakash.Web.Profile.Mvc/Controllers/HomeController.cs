@@ -24,11 +24,11 @@ namespace CPrakash.Web.Profile.Mvc.Controllers
                 profile.Name = string.Format("Hello Mr.!!! {0} {1}", firstName, lastName);
 
             var address = profile.Address;
-            if(address != null)
+            if(address == null)
                 address = new Address { Street = "Jefferson", Unit = "Line1", City = "Louisville", State = "KY", ZipCode = "40220" };
             profile.Address = address;
             profile.Save();
-            return View();
+            return View(profile);
         }
 
     }
