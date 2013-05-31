@@ -84,11 +84,9 @@ namespace CPrakash.Web.Profile.Mvc.Services
         private Type GetObjectType(XElement xNode)
         {
             string type = "System.String";
-            string module = string.Empty;
             if (xNode.HasAttributes)
             {
                 type = xNode.Attribute(XName.Get("type", string.Empty)).Value;
-                module = xNode.Attribute(XName.Get("module", string.Empty)).Value;
             }
             return Type.GetType(type);
         }
@@ -112,7 +110,7 @@ namespace CPrakash.Web.Profile.Mvc.Services
             XElement el = new XElement("profile",
             properties.Select(kv => new XElement(kv.Key, 
                                                 kv.Value.GetType().IsSimpleType() ? kv.Value as object : this.SerializeComplexType(kv.Value),
-                                                new XAttribute("type", kv.Value.GetType().FullName), new XAttribute("module", kv.Value.GetType().Assembly.FullName))));
+                                                new XAttribute("type", kv.Value.GetType().FullName))));
 
             return el;
         }
@@ -125,7 +123,7 @@ namespace CPrakash.Web.Profile.Mvc.Services
             var elements = from prop in props
                            let name = XmlConvert.EncodeName(prop.Name)
                            let val = prop.PropertyType.IsArray ? "array" : prop.GetValue(childValue, null)
-                           let value = prop.PropertyType.IsArray ? GetArrayElement(prop, (Array)prop.GetValue(childValue, null)) : (prop.PropertyType.IsSimpleType() ? new XElement(name, val, new XAttribute("type", val.GetType().FullName), new XAttribute("module", val.GetType().Assembly.FullName)) : new XElement(name, this.SerializeComplexType(val), new XAttribute("type", val.GetType().FullName), new XAttribute("module", val.GetType().Assembly.FullName)))
+                           let value = prop.PropertyType.IsArray ? GetArrayElement(prop, (Array)prop.GetValue(childValue, null)) : (prop.PropertyType.IsSimpleType() ? new XElement(name, val, new XAttribute("type", val.GetType().FullName)) : new XElement(name, this.SerializeComplexType(val), new XAttribute("type", val.GetType().FullName)))
                            where value != null
                            select value;
 
