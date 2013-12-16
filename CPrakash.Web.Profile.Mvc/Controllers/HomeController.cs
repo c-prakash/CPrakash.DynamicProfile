@@ -12,24 +12,23 @@ namespace CPrakash.Web.Profile.Mvc.Controllers
     {
         //
         // GET: /Home/
-
         public ActionResult Index()
         {
-            dynamic profile = new Profile(new ProfileService());
+            Profile profile = new Profile(new ProfileService());
 
-            var firstName = profile.FirstName;
-            var lastName = profile.LastName;
-            var name = profile.Name;
-            if(string.IsNullOrWhiteSpace(name))
-                profile.Name = string.Format("Hello Mr.!!! {0} {1}", firstName, lastName);
+            var firstName = profile.Properties.FirstName;
+            var lastName = profile.Properties.LastName;
+            var name = profile.Properties.Name;
+            if (string.IsNullOrWhiteSpace(name))
+                profile.Properties.Name = string.Format("Hello Mr.!!! {0} {1}", firstName, lastName);
 
-            var address = profile.Address;
-            if(address == null)
+            var address = profile.Properties.Address;
+            if (address == null)
                 address = new Address { Street = "Jefferson", Unit = "Line1", City = "Louisville", State = "KY", ZipCode = "40220" };
-            profile.Address = address;
+            profile.Properties.Address = address;
             profile.Save();
+            
             return View(profile);
         }
-
     }
 }
